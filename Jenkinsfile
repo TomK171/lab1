@@ -3,8 +3,8 @@ pipeline{
   stages{
      stage("cleanup "){
        steps{
-        sh "docker rm -f $(docker ps -aq) || true"
-        sh "docker rmi $(docker images) || true" 
+        sh "docker rm -f \$(docker ps -aq) || true"
+        sh "docker rmi \$(docker images) || true" 
        }
     stage("create Image"){
         steps{
