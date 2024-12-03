@@ -6,6 +6,7 @@ pipeline{
         sh "docker rm -f \$(docker ps -aq) || true"
         sh "docker rmi \$(docker images) || true" 
        }
+     }
     stage("create Image"){
         steps{
            sh "docker build -t my-python-app ."
